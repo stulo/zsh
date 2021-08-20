@@ -37,6 +37,10 @@ zsh_add_file "zsh-exports"
 # zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
+zsh_add_file "./manual_plugins/web-search.plugin.zsh"
+zsh_add_file "./manual_plugins/zsh_reload.plugin.zsh"
+zsh_add_file "./manual_plugins/git.plugin.zsh"
+zsh_add_file "./manual_plugins/history.plugin.zsh"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -60,3 +64,16 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # bindkey "^j" down-line-or-beginning-search # Down
 # bindkey -r "^u"
 # bindkey -r "^d"
+
+# FZF 
+# TODO update for mac
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
+# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+compinit
+
+# Edit line in vim with ctrl-e:
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey '^e' edit-command-line
