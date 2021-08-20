@@ -5,3 +5,7 @@
 source $HOME/.config/zsh/zshrc
 ```
 - Clone repo into your .config folder of your home directory
+- Enter the following to make zsh default shell
+```
+chsh -s $(which zsh)
+```
