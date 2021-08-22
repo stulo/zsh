@@ -16,6 +16,10 @@
 # alias remarkable_ssh='ssh root@10.11.99.1'
 # alias restream='restream -p'
 
+# MIT license generator
+# must run: npm install -g mit-license-generator
+alias mit='license-mit create -a Sterling\ Fairfield -y $(date +%Y)'
+
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
